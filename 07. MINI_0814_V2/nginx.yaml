@@ -29,7 +29,7 @@ spec:
       - name: nginx
         image: nareunhang/test:finalFront
         imagePullPolicy: Always
-        volumeMounts:
+        volumeMounts:             # 여기에 넣어줄거면 nareunhang/test:finalFront, 주석처리 할거면 nareunhang/test:middleFront1
         - name: nginx-config
           mountPath: /etc/nginx/conf.d/nginx.conf
           subPath: nginx.conf
