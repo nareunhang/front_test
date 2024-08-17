@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-nginx-config
+  namespace: default  # 필요한 경우 네임스페이스를 수정하십시오.
+data:
+  nginx.conf: |
+    server {
+        listen 80;
+
+        server_name localhost;
+
+        location / {
+            root   /usr/share/nginx/html;
+            index  index.html index.htm;
+            try_files $uri $uri/ /index.html;
+        }
+
+        error_page  404 /index.html;
+        location = /index.html {
+            root   /usr/share/nginx/html;
+            internal;
+        }
+    }

@@ -1,0 +1,8 @@
+  apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: spring-conf
+  data:
+    MYSQL_URL: "jdbc:mysql://db-svc:3306/board?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul"
+    MYSQL_USER: "team2"
+    MYSQL_PASSWORD: "1234"
