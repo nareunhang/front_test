@@ -31,7 +31,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:             # 여기에 넣어줄거면 nareunhang/test:finalFront, 주석처리 할거면 nareunhang/test:middleFront1
         - name: nginx-config
-          mountPath: /etc/nginx/conf.d/nginx.conf
+          mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
       volumes:
       - name: nginx-config
